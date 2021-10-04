@@ -11,30 +11,33 @@ namespace Practica_IV
 
             List<int> numeros = new List<int>() { 2, 3, 5, 9, 11, 14, 15, 18, 19, 22, 25, 27, 30 };
 
-            Console.WriteLine(Helpers.Pares(numeros));
+            foreach (var n in Helpers.Pares(numeros))
+            {
 
-            Console.ReadKey();
+                Console.WriteLine(n);
 
+            }
         }
 
-        /*=================================================================================================*/
 
-        // 2da. parte de la practica:
-        // Escribir los siguientes metodos como expresiones lambda:
 
-        /* 
-         * a)
-         *    public bool EsImpar(int x){
+        /*=================================================================================================
+
+        2da. parte de la practica:
+        Escribir los siguientes metodos como expresiones lambda:
+
+
+         a)
+            public bool EsImpar(int x){
                 if (x % 2 != 0){
                   return true;
                 else{
                   return false;
                 }
               }
+
          */
-
-        public bool EsImpar(int x) => (x % 2 != 0);
-
+        public bool EsImpar(int x) => x % 2 != 0;
 
 
         /*
@@ -51,14 +54,15 @@ namespace Practica_IV
 
         /*
          * c)
-        *   public void GetDate(){
+           public void GetDate(){
                var fecha = DateTime.Now;
                return fecha;
-            }
+           }
         */
 
         public DateTime GetDate() => DateTime.Now;
-      
+
+
     }
 
 }
